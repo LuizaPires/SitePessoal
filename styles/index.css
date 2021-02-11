@@ -1,0 +1,946 @@
+/* Reset Geral
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -----------Início do código---------------*/
+:root {
+--amarelo: #fde03a;
+--cinza: #95969a;
+--cinzaBotao: #525252;
+--cafe: #49120b;
+--espuma: #d56406;
+--indent: 5%;
+--alturaDaLinha: 1.3em; 
+--margemTextoLateral: 2rem;
+--margemTextoTopo: 0.8rem;
+--titulo: 'Glass Antiqua', cursive;
+--conteudo: 'Josefin Sans', sans-serif;
+}
+
+@font-face {
+    font-family: DoBau;
+    src: url(../fonts/DoBau.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    background-color: var(--amarelo);
+}
+
+body {
+    width: 100%;
+}
+
+h2 {
+    font-size: 3em;
+    color: var(--amarelo);
+    text-shadow: 2px 2px 2px #440800;
+    font-family: var(--titulo);
+    text-align: center;
+    font-kerning: auto;
+    letter-spacing: 10px;
+    font-weight: 700;
+    padding: 7px 0;
+    border-top: 1px solid var(--amarelo);
+    border-bottom: 1px solid;
+    background-image: linear-gradient(90deg, #49120b, #d5640629, #49120b);
+}
+
+/* ----------------------------- AREA TODPO --------------------------------*/
+.areaTopo {
+    background-image: url(../images/workspace-with-modern-laptop2.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    font-family: var(--conteudo);
+    width: 100%;
+    height: 100vh;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* ----------------------- SLIDER -------------------------*/
+.basicSlider {
+    margin: 0 1%;
+    padding-top: 9px;
+    height: 56px;
+    width: 98%;
+    border: 1px solid var(--amarelo);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 0px #c1b12187;
+    background-color: #ffffff3b;
+}
+
+/* ------------------cabeçalho----------------*/
+.cabecalho {
+    padding: 1% 0;
+    width: 100%;
+    font-family: var(--titulo);
+    color: var(--amarelo);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #ffffff1a;
+}
+
+.principal {
+    padding-top: 25vh;
+    width: 45vw;
+    margin: auto;
+    font-family: var(--titulo);
+    color: var(--amarelo);
+}
+
+.logo {
+    padding: 1% 0;
+    font-size: 6.5vw;
+    text-shadow: 3px 2px 4px var(--cafe);
+    text-align: center;
+    font-weight: 400;
+    border-top: 1px solid var(--amarelo);
+    border-bottom: 1px solid var(--amarelo);
+    background-image: linear-gradient(90deg, #fde03a00, #52201fa8, #fde03a03);
+    backdrop-filter: blur(3px);
+}
+
+/* -----------MENU ------------*/
+.links {
+    padding: 0.7% 0px 1% 0;
+    text-align: center;
+    background-color: var(--cafe);
+    font-size: 1.8vw;
+    border-radius: 0 0 20px 20px;
+}
+
+.designs, .desenvolvimento, .quemSouEu, .blog {
+    padding: 0 10px;
+    transition: color 300ms ease-in-out;
+}
+.designs:hover, .desenvolvimento:hover, .quemSouEu:hover, .blog:hover {
+    color: var(--espuma);
+}
+
+/* ----------------------------- DON NORMAN ---------------------------*/
+.molduraNorman {
+    width: 100%;
+}
+
+.donNorman {
+    width: 70%;
+    height: 350px;
+    margin: auto;
+    color: var(--cafe);
+    font-family: var(--conteudo);
+    position: relative;
+}
+
+.donNormanTexto {
+    font-style: italic;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    font-size: 2.7vw;
+    text-align: justify;
+    text-indent: 15%;
+    line-height: 1.2em;
+}
+
+.donNormanNome {
+    height: 30%;
+    position: absolute;
+    top: 14rem;;
+    right: 0;
+    padding-right: 20px;
+    text-align: right;
+}
+
+/* ------------------------------- AREA DESIGNS -------------------------------*/
+.areaDesigns {
+    width: 100%;
+    height: 34vw;
+    background-color: var(--cafe);
+}
+
+.designsEsquerda {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 2% 5%;
+}
+
+.designsEsquerda h2 {
+    margin: 3% 0;
+}
+.designsEsquerda li {
+    width: 46%;
+    float: left;
+    font-weight: 300;
+    text-align: center;
+    font-family: var(--conteudo);
+    font-size: 1.7vw;
+    padding: 1.7vw;
+    background-color: #d56406ab;
+    color: var(--amarelo);
+    margin: 0.7vw;
+    border-radius: 3px;
+    border-bottom: 1px solid #ff6800;
+    border-right: 1px solid #ff6800;
+    text-shadow: 0px 0px 8px #49120b;
+    box-shadow: inset 1px 1px 13px var(--cafe), 1px 1px 3px #ff8531ad;
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out, box-shadow 500ms ease-in-out, text-shadow 500ms ease-in-out, border-color 500ms ease-in-out;
+}
+
+.designsEsquerda li:hover {
+    box-shadow: inset 1px 1px 13px #49120bcc, 0px 0px 8px #c2a7f945;
+    background-color: #ff7400d6;
+    border-bottom: 1px solid #ffa052;
+    border-right: 1px solid #ffa052;
+    text-shadow: 0px 0px 8px #c2a7f9;
+    color: #fad9c6;
+}
+
+.designsDireita {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/girl-esp-683.jpg);
+    background-size: cover;
+    float: left;
+}
+
+.demonstracao {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 10%;
+    border: 1px solid var(--amarelo);
+    border-radius: 15px 0 0 15px;
+    transition: width 500ms ease-in-out, right 500ms ease-in-out, border 500ms ease-in-out, right 500ms ease-in-out, bottom 500ms ease-in-out, border-radius 500ms ease-in-out;
+}
+
+.demonstracao:hover {
+    width: 91.2%;
+    border: 4px solid var(--amarelo);
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+}
+
+/* ----------------------------- NIELSEN ---------------------------*/
+.molduraNielsen {
+    width: 100%;
+    background-color:#efebc9;
+}
+.Nielsen{
+    width: 70%;
+    height: 350px;
+    margin: auto;
+    color: var(--cafe);
+    font-family: var(--conteudo);
+    position: relative;
+}
+.nielsenTexto {
+    font-style: italic;
+    height: 65%;
+    position: absolute;
+    bottom: 0;
+    font-size: 2.7vw;
+    text-align: justify;
+    text-indent: 15%;
+    line-height: 1.2em;
+}
+.nielsenNome {
+    height: 30%;
+    position: absolute;
+    top: 14rem;;
+    right: 0;
+    padding-right: 20px;
+    text-align: right;
+}
+
+/* ------------------------------- AREA DESENVOLVIMENTO -------------------------------*/
+.areaDesenvolvimento {
+    width: 100%;
+    height: 563px;
+    background-position-x: center;
+    background-image: url(../images/diverse-people-using-their-phones.jpg);
+}
+
+.desenvolvimento-btn {
+    width: 50vw;
+    margin: auto;
+    margin-top: 7%;
+    font-family: DoBau;
+    font-size: 8vw;
+}
+
+.github-btn, .codepen-btn{
+    margin: 0;
+    float: left;
+    color: var(--cafe);
+    backdrop-filter: blur(3px);
+    border-radius: 50%;
+    padding: 21px;
+    border: 1px solid wheat;
+    background-image: linear-gradient(0deg, #fcb5a963, transparent);
+    box-shadow: 1px 1px 3px #49120b57, inset 1px 1px 12px #49120bbf;
+    transition: background-image 300ms ease-in-out, color 1000ms ease-in-out;
+}
+
+.codepen-btn {
+    float: right;
+}
+
+.github-btn:hover, .codepen-btn:hover {
+    color: var(--espuma);
+    background-image: linear-gradient(0deg, #fde03a7d, transparent);
+}
+
+/* ------------------------------- AREA CONTATO -------------------------------*/
+.contato {
+    width: 100%;
+    height: 950px;
+    background-color: #fcb5a9;
+}
+
+.Jobs {
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    color: var(--cafe);
+    font-family: var(--conteudo);
+    position: relative;
+}
+
+.jobsTexto {
+    font-style: italic;
+    height: 65%;
+    position: absolute;
+    bottom: 0;
+    font-size: 2.5em;
+    text-align: justify;
+    text-indent: 15%;
+    line-height: 1.2em;
+}
+.jobsNome {
+    height: 30%;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    padding: 20px;
+    text-align: right;
+}
+
+.msg {
+    width: 50vw;
+    margin: auto;
+    font-size: 2.5vw;
+    color: var(--cafe);
+    font-family: var(--titulo);
+    text-shadow: none;
+    text-align: center;
+    letter-spacing: 0.2vw;
+    font-weight: 700;
+    padding: 7px 0;
+    border-top: 1px solid #eae3c2;
+    border-bottom: 1px solid #eae3c2;
+    background-image: linear-gradient(90deg, #fcb5a9, #d5640629, #fcb5a9);
+}
+
+.contatoLatEsquerda {
+    width: 46%;
+    height: 500px;
+    margin: 2%;
+    float: left;
+    color: var(--cafe);
+    font-family: var(--conteudo);
+}
+
+.contatos {
+    width: 100%;
+    height: 20%;
+    box-shadow: 0px 2px 5px #ff796282;
+    background-color: #f5f5dc45;
+    border: 1px solid #eae3c2;
+    border-radius: 7px;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.whatsapp {
+    font-size: 25px;
+    margin: 0 30px;
+}
+
+#whatsapp {
+    font-family: DoBau;
+    font-size: 35px;
+    color: var(--cafe);
+    backdrop-filter: blur(3px);
+    text-align: center;
+    border-radius: 50%;
+    padding: 15px;
+    border: 1px solid wheat;
+    background-image: linear-gradient(44deg, #eae3c2a1, transparent);
+    box-shadow: 1px 1px 3px #49120b57, inset 1px 1px 12px #8c100096;
+    transition: background-image 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#whatsapp:hover {
+    color: var(--espuma);
+    background-image: linear-gradient(0deg, #fde03a7d, transparent);
+}
+
+.infGerais {
+    width: 100%;
+    height: 60%;
+    
+}
+
+.containerForm {
+    width: 46%;
+    height: 500px;
+    margin: 2%;
+    float: left;
+    box-shadow: 0px 2px 5px #ff796282;
+    background-color: #f5f5dc45;
+    border: 1px solid #eae3c2;
+    border-radius: 7px;
+    color: var(--cafe);
+    padding: 2%;
+    font-family: var(--conteudo);
+}
+
+.containerForm h1 {
+    font-size: 25px;
+}
+
+.obrigatorio {
+    color: red;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    margin: 1px 0 7px 0;
+    border-radius: 5px;
+    border: 1px solid #fde03aab;
+    padding: 0 10px;
+}
+
+select.form-control {
+    height: 30px;
+    color: var(--cafe);
+    font-weight: 600;
+    margin: 1px 0 7px 0;
+    border-radius: 5px;
+    border: 1px solid #fde03aab;
+    padding: 0 10px;
+}
+
+textarea#exampleTextarea {
+    width: 100%;
+    min-height: 100px;
+    color: var(--cafe);
+    margin: 1px 0 7px 0;
+    border-radius: 5px;
+    border: 1px solid #fde03aab;
+    padding: 0 10px;
+}
+
+input#submit {
+    border: none;
+    border-right: 1px solid #f3d4b1;
+    border-bottom: 1px solid #f3d4b1;
+    background-color: #ffffff80;
+    width: 30%;
+    height: 40px;
+    color: var(--cafe);
+    font-weight: 600;
+    background-image: linear-gradient(209deg, #f5f5dc59, #f7a99070);
+    box-shadow: 0px 1px 3px #49120b36;
+    float: right;
+    text-shadow: 0 0 5px #49120b99;
+    transition: background-image 300ms ease-in-out, box-shadow 300ms ease-in-out, text-shadow 300ms ease-in-out, color 300ms ease-in-out, border-cokor 300ms ease-in-out;
+}
+
+input#submit:hover {
+    background-image: linear-gradient(204deg, #f5f5dc59, #ff796238);
+    box-shadow: 0px 1px 10px #ff79624a;
+    text-shadow: 0 0 10px #ff7962;
+    color: #ff7962;
+    border-color: #fde03ab0;
+}
+
+#irTopo {
+    font-family: DoBau;
+    color: var(--cafe);
+    background-color: #ffffff59;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid wheat;
+    box-shadow: 1px 1px 3px #49120b57, inset 1px 1px 9px #49120b;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#irTopo:hover {
+background-color: var(--amarelo);
+color: var(--espuma);
+}
+
+/* --------------------------------- FORMULÁRIO --------------------------------------*/
+
+
+/* -------------------rodapé----------------------*/
+.creditos {
+    font-family: var(--conteudo);
+    font-size: 1vw;
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    color: var(--cafe);
+}
+.copyright {
+    font-family: var(--conteudo);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    color: var(--amarelo);
+    background-image: linear-gradient(90deg, #fde03a00, #52201fa8, #fde03a03);
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    font-size: 0.8em;
+    cursor: none;
+    text-align: center;
+}
+
+/*--------------------------------- MEDIAS QUERIES ---------------------------------*/
+
+@media screen and (max-width: 1024px) {
+    .areaTopo {
+        height: 70vh;
+    }
+    .principal {
+        padding-top: 14.5vh;
+        width: 60vw;
+    }
+    h2 {
+        font-size: 2.6em;
+    }
+}
+@media screen and (max-width:900px){
+    .donNorman {
+        width: 75%;
+    }
+    .donNormanTexto {
+        font-size: 3.2vw;
+    }
+    .donNormanNome {
+        top: 13rem;
+    }
+    .Nielsen {
+        width: 75%;
+    }
+    .nielsenTexto {
+        font-size: 3.2vw;
+    }
+    .nielsenNome {
+        top: 13rem;
+    }
+    .areaDesenvolvimento {
+        background-image: url(../images/diverse-people-using-their-phones-900x563.jpg);
+    }
+    .desenvolvimento-btn {
+        width: 60vw;
+        margin-top: 10%;
+        font-size: 11vw;
+    }
+    .Jobs {
+        width: 75%;
+        height: 240px;
+    }
+    .jobsTexto {
+        font-size: 3.2vw;
+    }
+    .jobsNome {
+        top: 9rem;
+    }
+    .msg {
+        font-size: 3.5vw;
+    }
+    .entreEmContato {
+        margin-top: 3%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 9vw;
+    }
+    .links {
+        font-size: 1em;
+    }
+    .donNorman {
+        height: 280px;
+    }
+    .donNormanNome {
+        top: 11rem;
+    }
+    .areaDesigns {
+        height: 40vw;
+    }
+    .designsEsquerda li {
+        font-size: 2.3vw;
+        padding-left: 2.3vw;
+        padding-right: 2.3vw;
+    }
+    .Nielsen {
+        height: 250px;
+    }
+    .nielsenNome {
+        top: 10rem;
+    } 
+    .msg {
+        width: 80vw;
+        font-size: 4vw;
+    }
+    .contato {
+        height: 1000px;
+    }
+    .entreEmContato {
+        position: relative;
+    }
+    .contatoLatEsquerda {
+        width: 90%;
+        margin: 2% 5%;
+        height: fit-content;
+        position: absolute;
+        top: 510px;
+    }
+    .containerForm {
+        width: 90%;
+        margin: 2% 5%;
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .areaTopo {
+        background-image: url(../images/workspace-with-modern-laptop-800x1024.jpg);
+    }
+    .principal {
+        padding-top: 14vh;
+        width: 80vw;
+    }
+    .logo {
+        font-size: 4em;
+    }
+    .donNormanTexto {
+        font-size: 4vw;
+    }
+    .donNormanNome {
+        top: 13rem;
+    }
+    .areaDesigns {
+        height: 46.5vw;
+    }
+    .designsEsquerda {
+        width: 55%;
+    }
+    .designsEsquerda li {
+        font-size: 1em;
+    }
+    .designsDireita {
+        width: 45%;
+    }
+    .nielsenTexto {
+        font-size: 4vw;
+        height: 70%;
+    }
+    .nielsennNome {
+        top: 13rem;
+    }
+    .areaDesenvolvimento {
+        background-image: url(../images/diverse-people-using-their-phones-600x563.jpg);
+    }
+    .areaDesenvolvimento h2 {
+        font-size: 6.6vw;
+    }
+    .desenvolvimento-btn {
+        width: 70vw;
+        margin-top: 20%;
+        font-size: 14vw;
+    }
+    .jobsTexto {
+        font-size: 4vw;
+    }
+    .whatsapp {
+        font-size: 4.5vw;
+    }
+    #irTopo {
+        bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .principal {
+        padding-top: 8vh;
+        width: 75vw;
+    }
+    .logo {
+        font-size: 3em;
+    }
+    .links {
+        font-size: 0.9em;
+    }
+    .areaDesigns {
+        height: 50vw;
+    }
+    .designsEsquerda {
+        padding: 2% 1% 2% 4%;
+    }
+    h2 {
+        letter-spacing: 6px;
+    }
+    .whatsapp {
+        font-size: 4.3vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .principal {
+        width: 80vw;
+    }
+    .logo {
+        font-size: 3em;
+    }
+    .links {
+        line-height: 25px;
+    }
+    
+    .copyright {
+        font-size: 0.6em;
+    }
+    .donNorman {
+        width: 75%;
+    }
+    .donNormanTexto {
+        font-size: 4.6vw;
+        height: 82%;
+    }
+    .donNormanNome {
+        padding: 12px;
+        top: 12rem;
+    }
+    .areaDesigns {
+        position: relative;
+        height: 73vw;
+    }
+    .designsEsquerda {
+        width: 100%;
+    }
+    .designsEsquerda h2 {
+        width: 50%;
+        margin-top: 11%;
+    }
+    .designsLista {
+        width: 94%;
+        margin: auto;
+        margin-top: 17%;
+    }
+    .designsEsquerda li {
+        width: 46%;
+        margin: auto;
+        float: left;
+        margin: 0.8% 2%;
+        padding: 9px;
+    }
+    .designsDireita {
+        position: absolute;
+        right: 0;
+        top: 7px;
+        width: 50%;
+        height: 50%;
+        border-bottom: 1px solid var(--amarelo);
+        border-top: 1px solid var(--amarelo);
+    }
+    .molduraNielsen {
+        height: 210px;
+    }
+    .Nielsen {
+        width: 75%;
+    }
+    .nielsenTexto {
+        font-size: 4.6vw;
+        height: 82%;
+    }
+    .nielsenNome {
+        padding: 12px;
+        top: 8rem;
+    }
+    .Jobs {
+        width: 75%;
+        height: 190px;
+    }
+    .jobsTexto {
+        font-size: 4.6vw;
+        height: 75%;
+    }
+    .jobsNome {
+        padding: 12px;
+        top: 7rem;
+    }
+    .whatsapp {
+        font-size: 4vw;
+    }
+    #whatsapp {
+        font-size: 6vw;
+        padding: 3vw;
+    }
+}
+@media screen and (max-width: 400px) {
+    .areaTopo {
+        background-image: url(../images/workspace-with-modern-laptop-540x720.jpg);
+    }
+    .areaDesigns {
+        height: 120vw;
+    }
+    .designsEsquerda {
+        padding: 0;
+    }
+    .designsEsquerda h2 {
+        width: 100%;
+        margin: 0;
+        margin-top: 5px;
+    }
+    .designsLista {
+        margin-top: 63vw;
+    }
+    .designsEsquerda li {
+        margin: 2vw 2%;
+    }
+    .designsDireita {
+        top: 67px;
+        width: 100%;
+    }
+    .areaDesenvolvimento {
+        background-image: url(../images/diverse-people-using-their-phones-400x563.jpg);
+    }
+    .desenvolvimento-btn {
+        margin-top: 30%;
+        font-size: 15vw;
+    }
+    .Jobs {
+        height: 170px;
+    }
+    .jobsNome {
+        top: 6rem;
+    }
+    .msg {
+        font-size: 6vw;
+    }
+    #irTopo {
+        bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .links {
+        font-size: 1.2em;
+        line-height: 29px;
+        padding-bottom: 7px;
+    }
+    .areaDesigns {
+        height: 130vw;
+    }
+    .designsLista {
+        margin-top: 65vw;
+    }
+    .designsEsquerda li {
+        padding: 9px 0;
+    }
+    .designsDireita {
+        height: 48%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .designsLista {
+        font-size: 5vw;
+        margin-top: 62vw;
+    }
+    .designsDireita {
+        height: 44%;
+    }
+    .whatsapp {
+        display: none;
+    }
+    #whatsapp {
+        margin: auto;
+        font-size: 30px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .designsEsquerda li {
+      
+        margin: 1.5vw 2%;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------*/

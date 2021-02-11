@@ -1,0 +1,344 @@
+/* Reset Geral
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -----------Início do código---------------*/
+:root {
+    --amarelo: #fde03a;
+    --cafe: #49120b;
+    --espuma: #d56406;
+    --rosa: #fcb5a9;
+    --bege: #eae3c2;
+    --cinza: #95969a;
+    --cinzaBotao: #525252;
+    --indent: 5%;
+    --alturaDaLinha: 1.3em; 
+    --margemTextoLateral: 2rem;
+    --margemTextoTopo: 0.8rem;
+    --titulo: 'Glass Antiqua', cursive;
+    --conteudo: 'Josefin Sans', sans-serif;
+}
+@font-face {
+    font-family: bauDeIcons;
+    src: url(../fonts/DoBau.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+html {
+    background-color: var(--bege);
+}
+body {
+    font-family: var(--conteudo);
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.construcao {
+    width: 100%;
+}
+.placa {
+    width: 700px;
+    max-width: 90%;
+    position: fixed;
+    top: 10vh;
+    left: 5%;
+    z-index: 50;
+    transform: rotate(-7deg);
+    transition: transform 1000ms ease-in-out;
+}
+.placa:hover {
+    transform: rotate(8deg) translate3d(10px, 90px, 30px);
+}
+
+/* ------------------ CABECALHO ----------------*/
+.cabecalho {
+    width: 100%;
+    background-image: linear-gradient(80deg, #cabe81, var(--bege));
+    border-bottom: 3px solid var( --rosa);
+    box-shadow: 6px 3px 3px 0px #af6256b8;
+    font-family: var( --titulo);
+    color: var( --amarelo);
+}
+.topo {
+    height: 25px;
+    background-color: var(--rosa);
+    box-shadow: 1px 2px 4px #af6256b8;
+}
+.logo {
+    padding: 1% 0 0.1% 4%;
+    font-size: 3em;
+    color: var(--cafe);
+}
+.line1 {
+    width: 50%;
+    background-color: var(--bege);
+    height: 1px;
+    position: absolute;
+    box-shadow: 1px 1px 1px 0px var(--rosa);
+}
+.definicao {
+    color: var(--cafe);
+    padding: 0.4% 0px 1% 4.1%;
+}
+.definicao:hover {
+    color: var(--amarelo);
+}
+.atual {
+    color: var(--cafe);
+}
+
+/* -----------MENU LATERAL ------------*/
+.lateral {
+    width: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 0.5%;
+    padding-bottom: 1%;
+    float: left;
+    border: 2px solid var(--rosa);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 1px 3px 0px #af6256b8;
+}
+button {
+    width: 90%;
+    margin: 2% 5%;
+    padding: 4%;
+    border: none;
+    border-bottom: 1px solid #fff7aeb4;
+    border-right: 1px solid #fff7aeb4;
+    border-radius: 5px;
+    background-color: #fcb5a900;
+    backdrop-filter: blur(6px);
+    color: var(--cafe);
+    font-family: bauDeIcons;
+    text-align: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    text-shadow: 1px 1px 4px #49120b7d;
+    box-shadow: 1px 1px 5px #49120b26, inset 1px 1px 20px #d8cc93;
+    transition: color 500ms ease-in-out, box-shadow 500ms ease-in-out, text-shadow 500ms ease-in-out, border-color 500ms ease-in-out;
+}
+.home-btn:hover {
+    color:  var(--amarelo);
+    border-color: var(--amarelo);
+    text-shadow: 1px 1px 4px #6d5d00;
+    box-shadow: 1px 1px 5px #6d5d0026, inset 1px 1px 9px #6d5d0042; 
+}
+.perfil-btn:hover {
+    color:  #00d9ff;
+    border-color: #00d9ff;
+    text-shadow: 1px 1px 4px #00627462;
+    box-shadow: 1px 1px 5px #00627462, inset 1px 1px 9px #00627442; 
+}
+.desenvolvimento-btn:hover {
+    color:  #0057ff;
+    border-color: #0057ff;
+    text-shadow: 1px 1px 4px #00246b62;
+    box-shadow: 1px 1px 5px #00246b62, inset 1px 1px 9px #00246b62; 
+}
+.contato-btn:hover {
+    color:  #ff0000;
+    border-color: #ff0000;
+    text-shadow: 1px 1px 4px #72000062;
+    box-shadow: 1px 1px 5px #72000062, inset 1px 1px 9px #72000042; 
+}
+
+/* ------------------- PRINCIPAL ------------------*/
+.principal{
+    width: 74%;
+    height: fit-content;
+    float: left;
+    margin-top: 15px;
+}
+.areas {
+    height: 56px;
+    width: 100%;
+    border: 1px solid var(--rosa);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 0px #af6256b8;   
+}
+.ilustracao-btn, .vetoriais-btn, .manualidades-btn {
+    font-family: var(--titulo);
+    font-size: 2vw;
+    padding: 7px 9%;
+    width: auto;
+    min-width: 8%;
+    margin: 6px 1.3%;
+    float: left;
+    border-bottom: 1px solid #fff7aeb4;
+    border-right: 1px solid #fff7aeb4;
+    border-radius: 5px;
+    background-color: #fcb5a900;
+    backdrop-filter: blur(6px);
+    color: var(--cafe);
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 1px 1px 4px #49120b7d;
+    box-shadow: 1px 1px 5px #49120b26, inset 1px 1px 20px #d8cc93;
+    transition: color 500ms ease-in-out, box-shadow 500ms ease-in-out, text-shadow 500ms ease-in-out, border-color 500ms ease-in-out;
+}
+.ilustracao-btn:hover {
+    color: var(--amarelo);
+    border-color: var(--amarelo);
+    text-shadow: 1px 1px 4px #a28b0062;
+    box-shadow: 1px 1px 5px #a28b0062, inset 1px 1px 9px #a28b0042;
+}
+.vetoriais-btn:hover {
+    color:  #db0078;
+    border-color: #db0078;
+    text-shadow: 1px 1px 4px #a8005d62;
+    box-shadow: 1px 1px 5px #a8005d62, inset 1px 1px 9px #a8005d42;
+}
+.manualidades-btn:hover {
+    color:  #00d9ff;
+        border-color: #00d9ff;
+        text-shadow: 1px 1px 4px #00627462;
+        box-shadow: 1px 1px 5px #00627462, inset 1px 1px 9px #00627442; 
+}
+
+
+.texto > p {
+    text-align: center;
+    padding-top: var(--margemTextoTopo);
+}
+
+/*--------------------- MEDIAS QUERIES ---------------------*/
+@media screen and (max-width: 800px) {
+    .line1 {
+        width: 60%;
+    }
+    body {
+        font-size: 0.9rem;
+    }
+    .texto > p {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    button {
+        font-size: 2.5rem;
+        padding-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        text-align: center;
+    }
+    .definicao {
+        padding: 0.8% 0px 1% 0%;
+        text-align: center;
+        line-height: 1.2em;
+    }
+    .line1 {
+        width: 70%;
+        left: 15%;
+        right: 15%;
+    }
+    button {
+        font-size: 2rem;
+        padding-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 0.8rem;
+    }
+    .texto > p{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .line1 {
+        width: 84%;
+        left: 8%;
+        right: 8%;
+    }
+   .lateral {
+       width: 96%;
+       float: none;
+   }
+   .btn {
+       padding-top: 4px;
+       padding-bottom: 10px;
+   }
+   button {
+       padding-bottom: 3%;
+       margin-bottom: 0px;
+       margin-top: 1px;
+   }
+   .principal {
+       width: 96%;
+       float: none;
+       margin-left: 2%;
+       margin-top: 2%;
+       border-top: 2px solid var(--amarelo);
+       border-radius: 10px;
+   }
+   .texto > p {
+       padding-top: 3%;
+   }
+}
+
+/* ------------------- RODAPE ----------------------*/
+.copyright {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    color: var(--cafe);
+    /* background-color: #f0f8ffc2; */
+    background-image: linear-gradient(45deg, #cabe81, #eae3c2);
+    padding: 5px;
+    box-shadow: 0px 0px 5px 0px #c18b78;
+    border-top: 3px solid var(--rosa);
+    font-size: 0.8em;
+    cursor: none;
+    text-align: center;
+}
+/*---------------------------------------------------------------------------------------------*/

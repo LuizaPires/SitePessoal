@@ -1,0 +1,378 @@
+/* Reset Geral
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -----------Início do código---------------*/
+:root {
+--amarelo: #fde03a;
+--cinza: #95969a;
+--cinzaBotao: #525252;
+--cafe: #49120b;
+--espuma: #d56406;
+--alturaDaLinha: 1.5em;
+--titulo: 'Glass Antiqua', cursive;
+--conteudo: 'Josefin Sans', sans-serif;
+}
+@font-face {
+    font-family: DoBau;
+    src: url(../fonts/DoBau.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+
+html {
+    background-color: var(--cafe);
+    background-image: url(../images/workspace-with-modern-laptop2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body {
+    font-family: var(--conteudo);
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* ------------------- lateral esquerda -----------------*/
+.logo {
+    padding: 1% 0 1.5% 4%;
+    font-size: 3em;
+    color: var(--amarelo);
+    font-family: var(--titulo);
+    background-image: linear-gradient(90deg, var(--cafe), #49120b7a, #d5640661);
+    border-bottom: 1px solid var(--amarelo);
+    border-top: 1px solid var(--amarelo);
+    margin-bottom: 8px;
+}
+
+.definicao {
+    padding: 0.4% 0px 1% 4.1%;
+    color: var(--amarelo);
+    font-family: var(--conteudo);
+}
+
+.apresentacao{
+    width: 23%;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 2%;
+    float: left;
+    padding: 7px 0;
+    box-shadow: 1px 1px 3px 0px #c1b12187;
+    background: #ffffff15;
+}
+
+.foto {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    border: 1px solid var(--amarelo);
+    padding: 4px 0px 0px 5px;
+    background: #ffffff15;
+    backdrop-filter: blur(2px);
+    transform: rotate(-15deg);
+    box-shadow: 0px 0px 8px #fde03a82;
+}
+
+.foto1 {
+    width: 76%;
+    margin: 0 12%;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid var(--amarelo);
+    transform: rotate(15deg);
+    box-shadow: 0px 0px 8px #fde03a82;
+    transition: transform 2s ease-in-out 500ms, border-radius 500ms ease-in-out;
+}
+
+.foto:hover .foto1{
+    transform: rotate(-345deg);
+    border-radius: 50%;
+}
+
+/* -------------------------- social -----------------------*/
+.social {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+}
+
+button {
+    background-color: #ffffff3d;
+    border: none;
+    border-bottom: 1px solid #fff7aeb4;
+    border-right: 1px solid #fff7aeb4;
+    border-radius: 5px;
+    font-family: DoBau;
+    font-size: 2rem;
+    text-align: center;
+    width: 5vw;
+    height: 5vw;
+    margin: 2%;
+    float: left;
+    cursor: pointer;
+    color: var(--amarelo);
+    text-shadow: 1px 1px 4px #636363c2;
+    box-shadow: 1px 1px 5px #fde03a42, inset 1px 1px 9px #fde03a42;
+    transition: color 500ms ease-in-out, box-shadow 500ms ease-in-out, text-shadow 500ms ease-in-out, border-color 500ms ease-in-out;
+}
+
+button:hover {
+    color: var(--cafe);
+    border-color: var(--cafe);
+    text-shadow: 1px 1px 4px var(--cafe);
+    box-shadow: 1px 1px 5px #49120b63, inset 1px 1px 15px #49120b9e;
+}
+
+/* -------------------principal------------------*/
+.principal{
+    width: 73%;
+    padding: 0px 40px 0 10px;
+    float: left;
+}
+
+.conteudo {
+    background-color: #ffffff3d;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    margin-right: 2%;
+    padding: 10px 30px;
+    float: left;
+    box-shadow: 1px 1px 3px 0px #c1b12187;
+    text-align: justify;
+    line-height: calc(var(--alturaDaLinha)*0.8);
+    text-indent: 5%;
+    backdrop-filter: blur(15px);
+}
+
+.principal > p {
+    margin-bottom: 1em;
+}
+
+/* ------------------ svg -------------------*/
+.borda{
+    margin: 2% 0;
+}
+#borda{
+    width: 100%;
+}
+.flor {
+    fill: var(--cafe);
+    fill-opacity: 0.5;}
+    .fil3 {
+        fill: var(--amarelo);
+    }
+    .fil2 {
+        fill: var(--espuma);
+    }
+    .fil1 {
+        fill: var(--cafe);
+        fill-opacity: 0.1;
+    }
+
+.italico {
+    font-style: italic;
+}
+
+/* -------------------rodapé----------------------*/
+.creditos {
+    text-orientation: sideways;
+    font-size: 1vw;
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+    color: var(--cafe);
+    writing-mode: tb-rl;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    color: var(--amarelo);
+    background-image: linear-gradient(90deg, #fde03a00, #52201fa8, #fde03a03);
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    font-size: 0.8em;
+    cursor: none;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1024px){
+    .definicao {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 812px) and (min-width: 802px){
+    .logo {
+        font-size: 2em;
+    }
+    .definicao {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        background-image: url(../images/workspace-with-modern-laptop-800x1024.jpg);
+    }
+    .foto {
+       margin-top: 10px;
+    }
+    .apresentacao {
+        width: 29%;
+    }
+    .principal {
+        width: 65%;
+        padding: 0 0 0 5px;
+    }
+    .logo {
+        font-size: 2.4em;
+    }
+    .social {
+        width: 85%;
+    }
+    button {
+        font-size: 2.1rem;
+        width: 7vw;
+        height: 7vw;
+        margin: 2.4%;
+    }
+    .conteudo > p {
+        font-size: 0.8em;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+   .logo {
+       font-size: 2em;
+   }
+   button {
+    width: 10vw;
+    height: 10vw;
+    margin: 4.7%;
+   }
+   .foto {
+    width: 95%;
+    padding: 4px 0px 0px 0px;
+   }
+   .foto1 {
+    width: 95%;
+    margin: 0 3%;
+   }
+   .conteudo {
+    line-height: calc(var(--alturaDaLinha)/1.5);
+    text-indent: calc(5% * 2.5);
+    padding: 40px 30px;
+   }
+   .borda {
+       display: none;
+   }
+}
+
+@media screen and (max-width: 540px){
+    html {
+        background-image: url(../images/workspace-with-modern-laptop-540x720.jpg);
+    }
+    .conteudo {
+        padding: 30px 25px;
+        height: 100%;
+    }
+    .apresentacao {
+        height: 100%;
+    }
+    .copyright {
+        font-size: 0.6em;
+    }
+} 
+
+@media screen and (max-width: 411px){
+    html {
+        background-image: url(../images/workspace-with-modern-laptop-400x812.jpg);
+    }
+    .apresentacao {
+        width: 100%;
+        margin: 0;
+    }
+    .logo {
+        font-size: 3.1em;
+    }
+    .definicao {
+        font-size: 1.6em;
+        background-image: linear-gradient(90deg, #49120b9c, transparent, transparent);
+    padding-top: 6px;
+    }
+    .foto {
+        width: 70%;
+        padding: 0;
+    }
+    button {
+        width: 24.9vw;
+        height: 20vw;
+        margin: 2%;
+    }
+    .principal {
+        width: 100%;
+    padding: 0 0 30px 0px;
+    }
+    .conteudo > p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .apresentacao {
+        min-height: 100%;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------*/
