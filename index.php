@@ -47,12 +47,14 @@
         </div>
         <div class="principal">
             <h1 class="logo">Baú da Lu</h1>
+            <nav>
             <p class="links">
                 <a href="./Pages/quemSouEu.html" class="quemSouEu">Quem sou Eu</a> |
                 <a href="#areaDesigns" class="designs">Design</a> |
                 <a href="#areaDesenvolvimento" class="desenvolvimento">Desenvolvimento</a> |
                 <a href="https://www.baudalu.net.br/blog" class="blog" target="_blank">Blog</a>
             </p>
+            </nav>
         </div>
     </div>
     <div class="molduraNorman">
